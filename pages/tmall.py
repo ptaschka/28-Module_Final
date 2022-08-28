@@ -15,9 +15,6 @@ class MainPage(WebPage):
 
         super().__init__(web_driver, url)
 
-    # My wishlist
-    my_wishlist = WebElement(xpath='//div[@class="nav-wishlist"]')
-
     # Main search field
     search = WebElement(id='search-key')
 
@@ -72,6 +69,31 @@ class MainPage(WebPage):
     subsection_button_11 = WebElement(xpath='//div[@class="autoPartsCategory categoryTitle"]')
     subsection_button_12 = WebElement(xpath='//div[@class="beautyCategory categoryTitle"]')
     subsection_button_13 = WebElement(xpath='//div[@class="sportsCategory categoryTitle"]')
+
+    # Check logo "AliExpress"
+    logo_aliexpress = WebElement(xpath='//div[@class="top-lighthouse"]//a')
+
+    # My wishlist
+    my_wishlist = WebElement(xpath='//div[@class="nav-wishlist"]')
+
+    # My basket
+    basket = WebElement(xpath='//div[@class="nav-cart nav-cart-box"]')
+
+    # Change currency
+    currency = WebElement(xpath='//span[@class="currency"]')
+    currency_switch = WebElement(xpath='//span[@class="select-item"]')
+    new_currency = WebElement(xpath='//ul[@class="notranslate"]/li/a')
+    save_currency = WebElement(xpath='//div[@class="switcher-btn item util-clearfix"]')
+    currency_in_cards = ManyWebElements(xpath='//span[contains(text(), "US ")]')
+
+    # Search_error
+    search_error = WebElement(xpath='//*[@class="SearchWrap_SearchError__wordsWrap__oy8dw"]')
+
+    # Goods
+    good = WebElement(xpath='//div[@class="rax-view"]/a')
+
+
+
 
 
 
